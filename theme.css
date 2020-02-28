@@ -9,3 +9,8 @@ input {
     color: #898989;
     font-size: 2em;
 }
+
+img {
+    height: 100px;
+    width: 100px;
+}
