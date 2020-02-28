@@ -9,7 +9,7 @@
 <body>
 <input type="button" id="happybutton" value="press for happiness">
 <script language="javascript">
-    $("#happybutton").tap(function(){
+    $("#happybutton").click(function(){
         newcolour = "#" + Math.floor(Math.random()*1000000);
         $('body').css("background-color",newcolour);
         $('#happybutton').hide(400).show(400);
