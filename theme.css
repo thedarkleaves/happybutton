@@ -1,0 +1,11 @@
+body {
+    background-color: #34d72b;
+}
+
+input {
+    border: 3px solid #ABABAB;
+    border-radius: 15px;
+    background-color: white;
+    color: #898989;
+    font-size: 3em;
+}

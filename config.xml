@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="com.thedarkleaves.happybutton" version="0.0.1">
+    <name>Happy Button</name>
+    <description>A button for happiness</description>
+    <author email="thedar.kleaves@zohomail.com.au" href="http://appreciatethesauce.blogspot.com">Thedar Kleaves</author>
+    <platform name="android" />
+    <platform name="windows" />
+</widget>
