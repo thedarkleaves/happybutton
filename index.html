@@ -2,12 +2,14 @@
 <head>
 <title>happy button</title>
 <link rel="stylesheet" type="text/css" href="theme.css">
-<script src="lib/jquery.3.4.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 </head>
 <body>
 <input type="button" id="happybutton" value="press for happiness">
 <script language="javascript">
-    $("#happybutton").click(function(){
+    $("#happybutton").tap(function(){
         newcolour = "#" + Math.floor(Math.random()*1000000);
         $('body').css("background-color",newcolour);
         $('#happybutton').hide(400).show(400);
