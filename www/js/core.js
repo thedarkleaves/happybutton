@@ -2,6 +2,18 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAnj7PINJSyw5HuwTV-_9RBaNpnAJzGlLQ",
+            authDomain: "ouch-beta-mobile.firebaseapp.com",
+            databaseURL: "https://ouch-beta-mobile.firebaseio.com",
+            projectId: "ouch-beta-mobile",
+            storageBucket: "ouch-beta-mobile.appspot.com",
+            messagingSenderId: "380054382603",
+            appId: "1:380054382603:web:8c178d048c771515"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
     },
     // Bind Event Listeners
     //
