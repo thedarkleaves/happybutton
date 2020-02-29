@@ -3,7 +3,7 @@
     <name>Happy Button</name>
     <description>A button for happiness</description>
     <author email="thedar.kleaves@zohomail.com.au" href="http://appreciatethesauce.blogspot.com">Thedar Kleaves</author>
-    <!--<plugin name="cordova-plugin-whitelist" spec="1" />-->
+    <plugin name="cordova-plugin-whitelist" spec="1" />
     <preference name="phonegap-version" value="cli-9.0.0" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -15,4 +15,5 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+    <platform name="browser" />
 </widget>
