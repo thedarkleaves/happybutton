@@ -1,7 +1,26 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
+      // initialise cordova bits
+      this.bindEvents(); 
+      
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyB-ktTchK_mD2PYpHu8E01ruyyzoupy8KU",
+        authDomain: "happy-button-86879.firebaseapp.com",
+        databaseURL: "https://happy-button-86879.firebaseio.com",
+        projectId: "happy-button-86879",
+        storageBucket: "happy-button-86879.appspot.com",
+        messagingSenderId: "155468487530",
+        appId: "1:155468487530:web:f3456a8832f43742c0a313"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      
+      // custom bits 
+      $("#happybutton").on("tap click",function(){
+          startlogin();
+      });
     },
     // Bind Event Listeners 
     //
@@ -16,18 +35,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyB-ktTchK_mD2PYpHu8E01ruyyzoupy8KU",
-          authDomain: "happy-button-86879.firebaseapp.com",
-          databaseURL: "https://happy-button-86879.firebaseio.com",
-          projectId: "happy-button-86879",
-          storageBucket: "happy-button-86879.appspot.com",
-          messagingSenderId: "155468487530",
-          appId: "1:155468487530:web:f3456a8832f43742c0a313"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
