@@ -44,6 +44,9 @@ var app = {
 };
 
 function startLogin() {
+  newcolour = "#" + Math.floor(Math.random()*1000000);
+  $('body').css("background-color",newcolour);
+        
   // start login
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithRedirect(provider);
