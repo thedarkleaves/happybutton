@@ -1,23 +1,14 @@
+function printdebug(content) {
+  $("#debug").html(content);
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
       // initialise cordova bits
+      printdedub("initialising");
       this.bindEvents(); 
-      
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyB-ktTchK_mD2PYpHu8E01ruyyzoupy8KU",
-        authDomain: "happy-button-86879.firebaseapp.com",
-        databaseURL: "https://happy-button-86879.firebaseio.com",
-        projectId: "happy-button-86879",
-        storageBucket: "happy-button-86879.appspot.com",
-        messagingSenderId: "155468487530",
-        appId: "1:155468487530:web:f3456a8832f43742c0a313"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      
-     
+    
     },
     // Bind Event Listeners 
     //
@@ -31,31 +22,34 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-        
-        // custom bits 
-        $("#happybutton").on("tap click",function(){
-          newcolour = "#" + Math.floor(Math.random()*1000000);
-          $('body').css("background-color",newcolour);
-          startlogin();
-        });
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+      printdebug("loading firebase");
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyB-ktTchK_mD2PYpHu8E01ruyyzoupy8KU",
+        authDomain: "happy-button-86879.firebaseapp.com",
+        databaseURL: "https://happy-button-86879.firebaseio.com",
+        projectId: "happy-button-86879",
+        storageBucket: "happy-button-86879.appspot.com",
+        messagingSenderId: "155468487530",
+        appId: "1:155468487530:web:f3456a8832f43742c0a313"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+            
+      
+      printdebug("intialising happy button")
+      // custom bits 
+      $("#happybutton").on("tap click",function(){
+        newcolour = "#" + Math.floor(Math.random()*1000000);
+        $('body').css("background-color",newcolour);
+        startlogin();
+      });
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-        
-        console.log('Received Event: ' + id);
-   
-    }
+      printdebug("ready");
+    },
 };
 
 function startLogin() {
-
         
   // start login
   var provider = new firebase.auth.GoogleAuthProvider();
