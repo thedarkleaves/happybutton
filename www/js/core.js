@@ -17,10 +17,7 @@ var app = {
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       
-      // custom bits 
-      $("#happybutton").on("tap click",function(){
-          startlogin();
-      });
+     
     },
     // Bind Event Listeners 
     //
@@ -35,6 +32,13 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        
+        // custom bits 
+        $("#happybutton").on("tap click",function(){
+          newcolour = "#" + Math.floor(Math.random()*1000000);
+          $('body').css("background-color",newcolour);
+          startlogin();
+        });
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -51,8 +55,7 @@ var app = {
 };
 
 function startLogin() {
-  newcolour = "#" + Math.floor(Math.random()*1000000);
-  $('body').css("background-color",newcolour);
+
         
   // start login
   var provider = new firebase.auth.GoogleAuthProvider();
