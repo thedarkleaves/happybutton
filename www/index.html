@@ -20,11 +20,6 @@ width=device-width, height=device-height, target-densitydpi=device-dpi" />
     </div>
 </div>
 <br>
-<script language="javascript">
-    $("#happybutton").on("tap click",function(){
-        startlogin();
-    });
-</script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/core.js"></script>
 
@@ -33,7 +28,13 @@ width=device-width, height=device-height, target-densitydpi=device-dpi" />
 <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
 
 <script type="text/javascript">
+    // initialise cordova
     app.initialize();
+
+    // custom stuff
+    $("#happybutton").on("tap click",function(){
+        startlogin();
+    });
 </script>
 
 </body>
