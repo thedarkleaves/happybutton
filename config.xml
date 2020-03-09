@@ -4,6 +4,14 @@
     <description>A button for happiness</description>
     <author email="thedar.kleaves@zohomail.com.au" href="http://appreciatethesauce.blogspot.com">Thedar Kleaves</author>
     <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-buildinfo">
+    <plugin name="cordova-universal-links-plugin-fix">
+    <plugin name="cordova-plugin-browsertab">
+    <plugin name="cordova-plugin-inappbrowser">
+    <!--TODO: Plugin to handle deep linking through Custom Scheme for iOS
+        Figure out how to substitute *com.firebase.cordova* with the iOS bundle ID of your app.-->
+    <!-- <plugin name="cordova-plugin-customurlscheme"> URL_SCHEME=com.firebase.cordova -->
+
     <preference name="phonegap-version" value="cli-9.0.0" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -13,11 +21,11 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />\
     <universal-links>
-    <host name="happybutton.page.link" scheme="https" />
-    <host name="happy-button-86879.firebaseapp.com" scheme="https">
-        <path url="/__/auth/callback"/>
-    </host>
-</universal-links>
+        <host name="happybutton.page.link" scheme="https" />
+        <host name="happy-button-86879.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback"/>
+        </host>
+    </universal-links>
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
