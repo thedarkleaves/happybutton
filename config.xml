@@ -7,7 +7,7 @@
     <plugin name="cordova-plugin-buildinfo" />
     <plugin name="cordova-universal-links-plugin-fix" />
     <plugin name="cordova-plugin-inappbrowser" />
-    <plugin name="cordova-plugin-browsertab" />
+    <!--<plugin name="cordova-plugin-browsertab" />-->
         <!--TODO: Plugin to handle deep linking through Custom Scheme for iOS
         Figure out how to substitute *com.firebase.cordova* with the iOS bundle ID of your app.-->
     <!-- <plugin name="cordova-plugin-customurlscheme"> URL_SCHEME=com.firebase.cordova -->
