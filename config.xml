@@ -4,10 +4,10 @@
     <description>A button for happiness</description>
     <author email="thedar.kleaves@zohomail.com.au" href="http://appreciatethesauce.blogspot.com">Thedar Kleaves</author>
     <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="cordova-plugin-buildinfo">
-    <plugin name="cordova-universal-links-plugin-fix">
-    <plugin name="cordova-plugin-browsertab">
-    <plugin name="cordova-plugin-inappbrowser">
+    <plugin name="cordova-plugin-buildinfo" />
+    <plugin name="cordova-universal-links-plugin-fix" />
+    <plugin name="cordova-plugin-browsertab" />
+    <plugin name="cordova-plugin-inappbrowser" />
     <!--TODO: Plugin to handle deep linking through Custom Scheme for iOS
         Figure out how to substitute *com.firebase.cordova* with the iOS bundle ID of your app.-->
     <!-- <plugin name="cordova-plugin-customurlscheme"> URL_SCHEME=com.firebase.cordova -->
