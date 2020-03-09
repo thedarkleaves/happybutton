@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget id="com.thedarkleaves.happybutton" version="0.0.1">
+<widget id="com.thedarkleaves.happybutton" version="0.0.1" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Happy Button</name>
     <description>A button for happiness</description>
     <author email="thedar.kleaves@zohomail.com.au" href="http://appreciatethesauce.blogspot.com">Thedar Kleaves</author>
+    
+    <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+        <intent-filter android:autoVerify="true">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:host="happy-button-86879.firebaseapp.com" android:pathPrefix="/__/auth/callback" android:scheme="https" />
+        </intent-filter>
+    </config-file>
+    <universal-links>
+        <host name="happybutton.page.link" scheme="https" />
+        <host name="happy-button-86879.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback"/>
+        </host>
+    </universal-links>
+    
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="cordova-plugin-buildinfo" />
     <plugin name="cordova-universal-links-plugin-fix" />
     <plugin name="cordova-plugin-inappbrowser" />
+    <plugin name="cordova-universal-links-plugin-fix" />
     <!--<plugin name="cordova-plugin-browsertab" />-->
         <!--TODO: Plugin to handle deep linking through Custom Scheme for iOS
         Figure out how to substitute *com.firebase.cordova* with the iOS bundle ID of your app.-->
@@ -20,12 +37,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />\
-    <universal-links>
-        <host name="happybutton.page.link" scheme="https" />
-        <host name="happy-button-86879.firebaseapp.com" scheme="https">
-            <path url="/__/auth/callback"/>
-        </host>
-    </universal-links>
+    
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
