@@ -12,11 +12,11 @@ function startLogin() {
       
   // start login
   // check passwords
-  password1 = $("#newuser_password").html();
-  password2 = $("#newuser_passwordconfirm").html();
+  password1 = $("#newuser_password").val();
+  password2 = $("#newuser_passwordconfirm").val();
   if (password1==password2) {
     // passwords match
-    email = $("#newuser_email").html();
+    email = $("#newuser_email").val();
     // create user
     firebase.auth().createUserWithEmailAndPassword(email, password1).catch(function(error) {
       // catch errors
