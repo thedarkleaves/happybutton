@@ -32,8 +32,7 @@ var app = {
     initialize: function() {
       // initialise cordova bits
       
-      $("#debug").html("initialising");
-      //printdedug("initialising");
+      printdedug("initialising");
       this.bindEvents(); 
     
     },
@@ -69,7 +68,7 @@ var app = {
       $("#happybutton").on("tap click",function(){
         newcolour = "#" + Math.floor(Math.random()*1000000);
         $('body').css("background-color",newcolour);
-        startlogin();
+        startLogin();
       });
 
       printdebug("ready");
