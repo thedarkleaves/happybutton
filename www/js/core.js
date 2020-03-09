@@ -4,8 +4,6 @@ function printdebug(content) {
 
 function startLogin() {
   printdebug("the login function has been called.");      
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
       
   // start login
   email = "simonscheck@live.com";
@@ -75,7 +73,9 @@ var app = {
         messagingSenderId: "155468487530",
         appId: "1:155468487530:web:f3456a8832f43742c0a313"
       };
-            
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+        
       printdebug("intialising happy button");
       // custom bits 
       $("#happybutton").on("tap click",function(){
