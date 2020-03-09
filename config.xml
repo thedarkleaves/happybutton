@@ -11,7 +11,7 @@
     <!--TODO: Plugin to handle deep linking through Custom Scheme for iOS
         Figure out how to substitute *com.firebase.cordova* with the iOS bundle ID of your app.-->
     <!-- <plugin name="cordova-plugin-customurlscheme"> URL_SCHEME=com.firebase.cordova -->
-
+    <preference name="AndroidLaunchMode" value="singleTask" />
     <preference name="phonegap-version" value="cli-9.0.0" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
