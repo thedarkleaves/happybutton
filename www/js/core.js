@@ -62,7 +62,6 @@ var app = {
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
             
-      
       printdebug("intialising happy button")
       // custom bits 
       $("#happybutton").on("tap click",function(){
