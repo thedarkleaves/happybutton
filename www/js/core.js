@@ -7,7 +7,7 @@ function startLogin() {
       
   // start login
   email = "simonscheck@live.com";
-  password = "test";
+  password = "test123";
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
