@@ -2,23 +2,33 @@ function printdebug(content) {
   $("#debug").append("<br>"+content);
 }
 
+// TODO: make this better 
+function popupmessage(content) {
+  printdebug(content);
+}
+
 function startLogin() {
   printdebug("the login function has been called.");      
       
   // start login
-  
-  /** this works
-  email = "simonscheck@live.com";
-  password = "test123";
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    printdebug("Auth Error: " + errorCode + " " + errorMessage);
-  });
-  printdebug("perhaps created user");
-  */
+  // check passwords
+  if ($("#newuser_password").html() == $("#newuser_passwordconfirm").html()) {
+    // passwords match
+    email = $("#newuser_email");
+    password = "test123";
+    // create user
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+      // catch errors
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      printdebug("Auth Error: " + errorCode + " " + errorMessage);
+    });
+    printdebug("perhaps created user");
+    } else {
+      popupmessage("passwords don't match");
+    }
 
+  /* google sign in - non functional
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithRedirect(provider);
   firebase.auth().getRedirectResult().then(function(result) {
@@ -40,7 +50,7 @@ function startLogin() {
     var credential = error.credential;
     // ...
   });
-
+  */
 }
 
 var app = {
