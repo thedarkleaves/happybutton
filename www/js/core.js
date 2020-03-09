@@ -1,5 +1,5 @@
 function printdebug(content) {
-  $("#debug").append(content+"<br>");
+  $("#debug").append("<br>"+content);
 }
 
 function startLogin() {
@@ -32,7 +32,7 @@ var app = {
     initialize: function() {
       // initialise cordova bits
       
-      printdedug("initialising");
+      printdebug("initialising");
       this.bindEvents(); 
     
     },
