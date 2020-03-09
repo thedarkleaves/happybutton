@@ -6,7 +6,9 @@ var app = {
     // Application Constructor
     initialize: function() {
       // initialise cordova bits
-      printdedug("initialising");
+      
+      $("#debug").html("initialising");
+      //printdedug("initialising");
       this.bindEvents(); 
     
     },
