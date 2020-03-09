@@ -6,6 +6,8 @@ function startLogin() {
   printdebug("the login function has been called.");      
       
   // start login
+  
+  /** this works
   email = "simonscheck@live.com";
   password = "test123";
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -15,8 +17,8 @@ function startLogin() {
     printdebug("Auth Error: " + errorCode + " " + errorMessage);
   });
   printdebug("perhaps created user");
-  
-  /* google sign in - doesn't work
+  */
+
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithRedirect(provider);
   firebase.auth().getRedirectResult().then(function(result) {
@@ -37,7 +39,7 @@ function startLogin() {
     // The firebase.auth.AuthCredential type that was used.
     var credential = error.credential;
     // ...
-  }); */
+  });
 
 }
 
