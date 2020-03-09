@@ -2,6 +2,8 @@ function printdebug(content) {
   $("#debug").html(content);
 }
 
+$("#debug").html("core.js is running");
+
 var app = {
     // Application Constructor
     initialize: function() {
