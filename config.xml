@@ -4,7 +4,7 @@
     <description>A button for happiness</description>
     <author email="thedar.kleaves@zohomail.com.au" href="http://appreciatethesauce.blogspot.com">Thedar Kleaves</author>
     
-    <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+ <!--   <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
         <intent-filter android:autoVerify="true">
             <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
@@ -18,17 +18,20 @@
             <path url="/__/auth/callback"/>
         </host>
     </universal-links>
-    
+ -->
+
     <plugin name="cordova-plugin-whitelist" spec="1" />
+ 
+ <!--
     <plugin name="cordova-plugin-buildinfo" />
     <plugin name="cordova-universal-links-plugin-fix" />
     <plugin name="cordova-plugin-inappbrowser" />
-    <plugin name="cordova-universal-links-plugin-fix" />
+-->
     <!--<plugin name="cordova-plugin-browsertab" />-->
         <!--TODO: Plugin to handle deep linking through Custom Scheme for iOS
         Figure out how to substitute *com.firebase.cordova* with the iOS bundle ID of your app.-->
     <!-- <plugin name="cordova-plugin-customurlscheme"> URL_SCHEME=com.firebase.cordova -->
-    <preference name="AndroidLaunchMode" value="singleTask" />
+ <!--   <preference name="AndroidLaunchMode" value="singleTask" /> -->
     <preference name="phonegap-version" value="cli-9.0.0" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
