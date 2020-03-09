@@ -11,9 +11,16 @@
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
+    <allow-intent href="geo:*" />\
+    <universal-links>
+    <host name="happybutton.page.link" scheme="https" />
+    <host name="happy-button-86879.firebaseapp.com" scheme="https">
+        <path url="/__/auth/callback"/>
+    </host>
+</universal-links>
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
     <platform name="browser" />
+
 </widget>
