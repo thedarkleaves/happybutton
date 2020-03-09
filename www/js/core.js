@@ -12,21 +12,22 @@ function startLogin() {
       
   // start login
   // check passwords
-  if ($("#newuser_password").html() == $("#newuser_passwordconfirm").html()) {
+  password1 = $("#newuser_password").html();
+  password2 = $("#newuser_passwordconfirm").html();
+  if (password1==password2) {
     // passwords match
-    email = $("#newuser_email");
-    password = "test123";
+    email = $("#newuser_email").html();
     // create user
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword(email, password1).catch(function(error) {
       // catch errors
       var errorCode = error.code;
       var errorMessage = error.message;
       printdebug("Auth Error: " + errorCode + " " + errorMessage);
     });
-    printdebug("perhaps created user");
-    } else {
+    printdebug("created user");
+  } else {
       popupmessage("passwords don't match");
-    }
+  }
 
   /* google sign in - non functional
   var provider = new firebase.auth.GoogleAuthProvider();
